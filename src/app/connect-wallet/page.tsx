@@ -1,19 +1,15 @@
 'use client';
 
-import { TonConnectButton, TonConnectUIProvider } from '@tonconnect/ui-react';
-import BalanceUI from '../components/balance/page';
-
-
+import { TonConnectUIProvider } from '@tonconnect/ui-react';
+import Navbar from '../components/Navbar'; // Đảm bảo đường dẫn đúng
 
 
 const ConnectWallet = () => {
-  
   return (
     <TonConnectUIProvider manifestUrl='https://ton-dapp-pi.vercel.app/tonconnect-manifest.json'>
-      <h1>Hello, Youtube</h1>
-      <div style={{ "padding": '10rem' }}>
-        <TonConnectButton />
-        <BalanceUI/>
+      <Navbar />
+      <div style={{ padding: '10px' }}>
+       
       </div>
     </TonConnectUIProvider>
   );

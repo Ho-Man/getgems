@@ -29,7 +29,7 @@ const BalanceUI = () => {
   };
 
   return (
-    <div>
+    <div >
       <p>Balance: {tonBalance} TON</p>
     </div>
   );

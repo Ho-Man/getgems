@@ -1,0 +1,170 @@
+/* Footer.module.css */
+
+.footer {
+    padding: 20px;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.footerContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.aboutTitle {
+    font-size: 24px; 
+    font-weight: bold; 
+    margin-bottom: 10px;
+}
+
+.logoSection {
+    margin-bottom: 10px;
+    text-align: left;
+    margin-left: 30px;
+}
+
+.contentBoxes {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    width: 100%;
+}
+
+.contentBox {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 0 10px;
+    flex: 1;
+    max-width: 200px;
+}
+
+.footerContainer {
+    display: flex; /* Sử dụng flexbox để chia ra hai bên */
+    justify-content: space-between; /* Căn chỉnh không gian giữa hai bên */
+    text-align: left;
+    padding: 20px; /* Thêm padding cho không gian bên trong */
+    margin-top: 30px; /* Thay đổi từ margin-right sang margin-top để tạo khoảng cách với phần trên */
+    margin-right: 30px;
+}
+
+.footerContent2 {
+    flex: 1; /* Để phần nội dung chiếm 1 không gian trong flex container */
+    margin-left: 0; /* Không cần khoảng cách bên trái */
+    padding-right: 30px; /* Thêm khoảng cách bên phải */
+}
+
+.buttonContainer {
+    display: flex;
+    justify-content: left;
+    margin-top: 10px;
+}
+.contentNavigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.navigationButton {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.navigationButton:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+.button {
+    display: flex;
+    align-items: center; /* Căn giữa các nút */
+    margin: 0 10px;
+    padding: 10px 20px;
+    border: 2px solid white; 
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.button:hover {
+    background-color: #007bff; 
+    color: white; 
+}
+
+.footerColumns {
+    display: flex; 
+    justify-content: flex-start; /* Căn chỉnh bắt đầu từ bên trái */
+    padding-top: 20px; /* Giảm padding-top để gần với nút hơn */
+    margin-left: 0; /* Không cần khoảng cách bên trái */
+    margin-left: 300px;
+}
+
+.column {
+    flex: 1; /* Đảm bảo các cột có chiều rộng đều nhau */
+    margin: 0 20px; /* Thay đổi margin để các cột không bị cách quá xa */
+}
+
+.column h4 {
+    font-size: 18px; 
+    margin-bottom: 10px; 
+}
+
+.column ul {
+    list-style-type: none; 
+    padding: 0; 
+}
+
+.column li {
+    margin: 5px 0; 
+}
+
+.column a {
+    text-decoration: none; 
+    color: inherit; 
+}
+
+.column a:hover {
+    text-decoration: underline; 
+}
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .contentBoxes {
+        flex-direction: column; /* Xếp các contentBox thành cột trên màn hình nhỏ */
+        align-items: center;
+    }
+
+    .contentBox {
+        max-width: 100%; /* Đảm bảo các contentBox chiếm toàn bộ chiều rộng */
+    }
+
+    .footerContainer {
+        flex-direction: column; /* Chuyển các phần tử thành cột thay vì hàng ngang */
+        text-align: center; /* Căn giữa nội dung */
+        margin-right: 0; /* Xóa khoảng cách bên phải */
+    }
+
+    .footerColumns {
+        flex-direction: column; /* Xếp các cột thành cột trên màn hình nhỏ */
+        margin-left: 0; /* Xóa khoảng cách bên trái */
+    }
+
+    .column {
+        margin: 10px 0; /* Thêm khoảng cách giữa các cột */
+    }
+
+    .buttonContainer {
+        justify-content: center; /* Căn giữa các nút trên màn hình nhỏ */
+    }
+
+    .logoSection {
+        margin-left: 0; /* Xóa khoảng cách bên trái trên màn hình nhỏ */
+    }
+}
