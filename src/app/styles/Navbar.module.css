@@ -1,20 +1,19 @@
 /* Navbar */
 .navbar {
   display: flex;
-  flex-wrap: wrap; /* Cho phép các phần tử gói xuống nếu không đủ không gian */
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 3rem; 
+  padding: 10px 3rem;
   background-color: white;
   color: black;
   position: relative;
 }
 
-/* Left Container (Logo and Search) */
 .leftContainer {
   display: flex;
   align-items: center;
-  flex: 1; /* Đảm bảo container chiếm không gian cần thiết */
+  flex: 1;
 }
 
 .logo {
@@ -25,27 +24,33 @@
 
 .logoImage {
   margin-right: 8px;
-  color: white;
-  background-color: white; /* Đặt nền logo */
+  background-color: white;
 }
 
 .searchContainer {
+  position: relative;
   display: flex;
   align-items: center;
-  flex: 1; /* Đảm bảo container chiếm không gian */
+  flex: 1;
+  width: 100%;
 }
 
 .searchInput {
-  padding: 0.5rem;
+  width: 100%;
+  padding: 0.5rem 1rem 0.5rem 2.5rem;
   border-radius: 30px;
   border: 1px solid #ccc;
-  margin-right: 0.5rem;
   outline: none;
-  width: 100%; /* Đảm bảo input chiếm toàn bộ không gian */
 }
 
 .searchInput:focus {
-  border-color: #007BFF;
+  border: 0.1rem solid green; 
+}
+.searchIcon {
+  position: absolute;
+  left: 10px;
+  font-size: 20px;
+  color: #aaa;
 }
 
 .pearlsButton {
@@ -57,7 +62,6 @@
   cursor: pointer;
 }
 
-/* Right Container (Connect and Icons) */
 .connectContainer {
   display: flex;
   align-items: center;
@@ -65,25 +69,20 @@
   flex: 1;
 }
 
-.connectButton {
+.connectButton,
+.balanceContainer {
   padding: 0.5rem 1rem;
-
-  color: white;
   border: none;
   border-radius: 30px;
   cursor: pointer;
   margin-right: 1rem;
 }
 
-.balanceContainer {
-  font-size: 16px;
-  color: black;
-}
-
 .iconContainer {
   cursor: pointer;
   display: flex;
   align-items: center;
+  margin: 18px;
 }
 
 .icon {
@@ -91,18 +90,18 @@
   color: #040404;
 }
 
-/* Dropdown Menu */
 .menu {
   position: absolute;
   top: 100%;
   right: 0;
-  background-color: #2C2C3A;
+  background-color: #2c2c3a;
   color: white;
   padding: 1rem;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   width: 300px;
   z-index: 1000;
+  margin-right: 20px;
 }
 
 .menuItem {
@@ -118,40 +117,31 @@
 
 .communityButton {
   padding: 0.5rem 1rem;
-  background-color: #3A3D4A;
+  background-color: #3a3d4a;
   color: white;
   border: none;
   border-radius: 4px;
 }
 
-/* Media Queries for Responsive Design */
+
 @media (max-width: 768px) {
   .navbar {
-    flex-direction: column; /* Đổi hướng các phần tử thành cột trên màn hình nhỏ */
-    align-items: flex-start; /* Căn trái tất cả phần tử */
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .leftContainer, .connectContainer {
-    flex-direction: column; /* Chuyển thành hàng dọc */
+    flex-direction: column;
     width: 100%;
     align-items: center;
   }
 
-  .searchInput {
-    margin-right: 0;
-    width: 100%; /* Đảm bảo input chiếm hết chiều rộng trên màn hình nhỏ */
+  .searchInput, .pearlsButton, .connectButton {
+    width: 90%;
+    margin-bottom: 10px;
   }
 
   .menu {
-    width: 100%; /* Đảm bảo menu chiếm toàn bộ chiều rộng trên màn hình nhỏ */
-  }
-
-  .pearlsButton {
-    width: 100%; /* Nút sẽ chiếm toàn bộ chiều rộng trên màn hình nhỏ */
-    margin-top: 10px;
-  }
-
-  .connectButton {
-    width: 100%; /* Nút sẽ chiếm toàn bộ chiều rộng */
+    width: 100%;
   }
 }

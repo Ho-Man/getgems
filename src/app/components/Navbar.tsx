@@ -21,23 +21,30 @@ const Navbar = () => {
 
   return (
     <div className={styles.navbar}>
-      {/* Logo và nút tìm kiếm */}
-      <div className={styles.leftContainer}>
-        <div className={styles.logoImage}>
-          <Image 
-            src="/images/logo.png" 
-            alt="Logo" 
-            width={40} 
-            height={40} 
-          />
-        </div>
-        <div className={styles.logo}>Getton</div>
-        <div className={styles.searchContainer}>
-          <SearchIcon className={styles.searchIcon} />
-          <input type="text" placeholder="Name or description" className={styles.searchInput} />
-          <button className={styles.pearlsButton}>Pearls</button>
-        </div>
+    {/* Logo và nút tìm kiếm */}
+    <div className={styles.leftContainer}>
+      <div className={styles.logoImage}>
+        <Image 
+          src="/images/logo.png" 
+          alt="Logo" 
+          width={40} 
+          height={40} 
+        />
       </div>
+      <div className={styles.logo}>Getton</div>
+      
+      {/* Phần tìm kiếm */}
+      <div className={styles.searchContainer}>
+        <SearchIcon className={styles.searchIcon} /> {/* Tách SearchIcon ra */}
+        <input 
+          type="text" 
+          placeholder="Name or description" 
+          className={styles.searchInput} 
+        /> {/* Input tách riêng */}
+        <button className={styles.pearlsButton}>Pearls</button>
+      </div>
+    </div>
+  
 
       {/* Nút kết nối, số dư, và HamburgerIcon */}
       <div className={styles.connectContainer}>

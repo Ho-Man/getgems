@@ -1,0 +1,61 @@
+.dropdown {
+    position: relative; /* Positions the menu relative to the button */
+    display: inline-block;
+    margin-right: 5rem;
+  }
+  
+  .filterButton {
+    background-color: #F0FFF0;
+    color: black;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .menu {
+    position: absolute;
+    top: 100%;
+    right: 1px;
+    background-color: #222;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    width: 200px;
+    height: auto;
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+  }
+  
+  .item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Ensure items are aligned to the left */
+    margin: 8px 0; /* Adds vertical spacing between each item */
+  }
+  
+  .item input {
+    margin-right: 10px; /* Spacing between checkbox and label */
+    width: 16px; /* Ensures consistent size for checkboxes */
+    height: 16px; /* Ensures consistent size for checkboxes */
+  }
+  
+  .item label {
+    color: white;
+    cursor: pointer;
+    line-height: 1.8;
+    font-size: 13px;
+    display: flex; /* Ensures the icon and text align horizontally */
+    align-items: center; /* Vertically center-aligns the icon and text */
+  }
+  
+  .icon {
+    margin-right: 5px; /* Spacing between the icon and the text */
+    font-size: 16px; /* Adjust size of the icon if needed */
+  }
+  
+  .menu input[type="checkbox"] {
+    accent-color: #4caf50; /* Customize the checkbox color */
+  }
+  

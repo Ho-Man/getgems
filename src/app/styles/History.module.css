@@ -1,0 +1,106 @@
+.table {
+  width: 93%;
+  margin-left: 50px;
+}
+
+.tableHead, .tableCell {
+  border-bottom: 1px solid #ddd; 
+}
+
+.tableHead {
+  background-color: #f5f5f5;
+} 
+
+.tableCell {
+  
+  padding: 10px 20px; 
+  text-align: right; 
+}
+
+.tableRow:hover {
+  background-color: #f1f1f1; 
+}
+
+.tableCell:nth-child(1) {
+  text-align: left; 
+}
+.histitle{
+  text-align: left;
+  margin-left: 3.1rem;
+  margin-bottom: 5px;
+}.tableContainer {
+  margin: 10px;
+}
+
+.header {
+  display: flex; /* Sử dụng flexbox */
+  justify-content: space-between; /* Căn chỉnh giữa */
+  align-items: center; /* Căn chỉnh dọc giữa */
+  margin-bottom: 10px; /* Khoảng cách giữa tiêu đề và bảng */
+}
+
+.histitle {
+  font-size: 24px; /* Kích thước chữ tiêu đề */
+}
+
+.addButton {
+  padding: 8px 12px;
+  margin-right: 50px;
+  color: black; 
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.addButton:hover {
+  background-color: #005bb5; /* Hiệu ứng hover */
+}
+.filterButton {
+  margin-left: 20px;
+  padding: 8px 12px;
+  background-color: #0070f3;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.filterMenu {
+  position: absolute;
+  background-color: white;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 5px;
+  padding: 10px;
+  z-index: 1;
+}
+
+.checkboxLabel {
+  display: block;
+  margin: 5px 0;
+}
+
+@media (max-width: 768px) {
+  .tableContainer {
+    overflow-x: auto; /* Thêm thanh cuộn ngang cho container */
+  }
+
+  .table {
+    width: 100%; /* Đảm bảo bảng chiếm toàn bộ chiều rộng */
+  }
+
+  .tableCell {
+    padding: 8px 10px; /* Giảm padding cho các ô */
+    text-align: left; /* Căn trái cho tất cả các ô */
+  }
+
+  .addButton, .filterButton {
+    width: 100%; /* Chiếm toàn bộ chiều rộng cho các nút */
+    margin-right: 0; /* Loại bỏ margin-right */
+  }
+
+  .filterMenu {
+    width: 100%; /* Đảm bảo menu lọc rộng 100% */
+  }
+
+}
