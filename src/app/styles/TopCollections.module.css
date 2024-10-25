@@ -1,33 +1,40 @@
 .topCollections {
   padding: 20px;
   background-color: #ffffff;
-  color:black;
+  color: black;
 }
 
 .productList {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around; /* Căn đều các sản phẩm */
-  gap: 20px; /* Khoảng cách giữa các sản phẩm */
+  justify-content: space-around;
+  gap: 20px;
 }
 
 .productCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   border: 1px solid #ccc;
   border-radius: 8px;
   padding: 16px;
   text-align: center;
   width: 200px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Thêm bóng cho sản phẩm */
-  transition: transform 0.3s; /* Hiệu ứng khi hover */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  min-height: 350px; /* Cố định chiều cao tối thiểu để các thẻ đều nhau */
 }
 
 .productCard:hover {
-  transform: translateY(-5px); /* Nâng sản phẩm lên khi hover */
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .productImage {
   width: 100%;
-  height: auto;
+  height: 150px; /* Cố định chiều cao của hình ảnh */
+  object-fit: cover; /* Đảm bảo ảnh phù hợp với khung mà không bị biến dạng */
   border-radius: 4px;
 }
 
@@ -35,11 +42,11 @@
   margin-top: 10px;
   padding: 8px 16px;
   background-color: #28a745;
-  color: rgb(5, 0, 0);
+  color: white;
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  transition: background-color 0.3s; /* Hiệu ứng chuyển màu */
+  transition: background-color 0.3s;
 }
 
 .buyButton:hover {
@@ -49,27 +56,38 @@
 .pagination {
   margin-top: 20px;
   display: flex;
-  justify-content: center; /* Căn giữa các nút phân trang */
+  justify-content: center;
 }
 
 .pagination button {
   margin: 0 5px;
   padding: 5px 10px;
+  background-color: #f1f1f1;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.pagination button:hover {
+  background-color: #007bff;
+  color: black
 }
 
 .activePage {
   background-color: #007bff;
-  color: rgb(7, 7, 7);
+  color:cyan;
 }
+
 /* Responsive điều chỉnh cho thiết bị nhỏ */
 @media (max-width: 768px) {
-  .collectionItem {
-    flex: 0 1 calc(50% - 20px); /* 2 item mỗi hàng trên màn hình nhỏ */
+  .productCard {
+    width: calc(50% - 20px); /* 2 sản phẩm mỗi hàng trên màn hình vừa */
   }
 }
 
 @media (max-width: 480px) {
-  .collectionItem {
-    flex: 0 1 100%; /* 1 item mỗi hàng trên màn hình rất nhỏ */
+  .productCard {
+    width: 100%; /* 1 sản phẩm mỗi hàng trên màn hình nhỏ */
   }
 }

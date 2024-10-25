@@ -30,6 +30,7 @@
     justify-content: space-between;
     margin: 20px 0;
     width: 100%;
+    
 }
 
 .contentBox {
@@ -136,35 +137,64 @@
 }
 /* Responsive adjustments */
 @media (max-width: 768px) {
+    .footer {
+        padding: 10px; /* Giảm padding để tiết kiệm không gian */
+    }
+
+    .footerContent {
+        align-items: center; /* Căn giữa các phần tử trong footer */
+    }
+
+    .aboutTitle {
+        font-size: 20px; /* Giảm kích thước tiêu đề */
+    }
+
+    .logoSection {
+        margin-left: 0; /* Xóa khoảng cách bên trái */
+        text-align: center; /* Căn giữa logo */
+    }
+
     .contentBoxes {
-        flex-direction: column; /* Xếp các contentBox thành cột trên màn hình nhỏ */
-        align-items: center;
+        flex-direction: column; /* Chuyển các contentBox thành cột */
+        align-items: center; /* Căn giữa các contentBox */
     }
 
     .contentBox {
-        max-width: 100%; /* Đảm bảo các contentBox chiếm toàn bộ chiều rộng */
+        max-width: 90%; /* Đảm bảo các contentBox không vượt quá chiều rộng màn hình */
+        margin: 10px 0; /* Thêm margin trên và dưới cho các contentBox */
     }
 
     .footerContainer {
-        flex-direction: column; /* Chuyển các phần tử thành cột thay vì hàng ngang */
+        flex-direction: column; /* Chuyển các phần tử thành cột */
         text-align: center; /* Căn giữa nội dung */
         margin-right: 0; /* Xóa khoảng cách bên phải */
     }
 
+    .footerContent2 {
+        padding-right: 0; /* Xóa padding bên phải */
+    }
+
     .footerColumns {
-        flex-direction: column; /* Xếp các cột thành cột trên màn hình nhỏ */
+        flex-direction: column; /* Xếp các cột thành cột */
         margin-left: 0; /* Xóa khoảng cách bên trái */
     }
 
     .column {
         margin: 10px 0; /* Thêm khoảng cách giữa các cột */
+        width: 100%; /* Chiếm toàn bộ chiều rộng */
+        text-align: center; /* Căn giữa nội dung trong cột */
     }
 
     .buttonContainer {
-        justify-content: center; /* Căn giữa các nút trên màn hình nhỏ */
+        justify-content: center; /* Căn giữa các nút */
+        margin-top: 10px; /* Thêm khoảng cách trên cho nút */
     }
 
-    .logoSection {
-        margin-left: 0; /* Xóa khoảng cách bên trái trên màn hình nhỏ */
+    .button {
+        padding: 10px 15px; /* Điều chỉnh padding cho nút */
+    }
+
+    .navigationButton {
+        padding: 8px; /* Giảm padding cho nút điều hướng */
     }
 }

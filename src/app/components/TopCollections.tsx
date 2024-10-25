@@ -11,8 +11,8 @@ interface Product {
   image: string;
 }
 
-const ITEMS_PER_PAGE = 5; // Số sản phẩm mỗi trang
-const TITLE_MAX_LENGTH = 20; // Độ dài tối đa của tên sản phẩm
+const ITEMS_PER_PAGE = 5; 
+const TITLE_MAX_LENGTH = 20; 
 
 export default function TopCollections() {
   const [products, setProducts] = useState<Product[]>([]);

@@ -1,0 +1,54 @@
+.auctionList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    background-color: #1c1c1c;
+  }
+  
+  .auctionItem {
+    position: relative;
+    width: 200px;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #2a2a2a;
+    color: #fff;
+    text-align: center;
+    transition: transform 0.3s;
+  }
+  
+  .auctionItem:hover {
+    transform: scale(1.05);
+  }
+  
+  .auctionImage {
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+  .auctionInfo {
+    margin-top: 10px;
+  }
+  
+  .buyButton {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  .auctionItem:hover .buyButton {
+    opacity: 1;
+  }
+  
+  @media 

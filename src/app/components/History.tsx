@@ -44,6 +44,8 @@ export default function BasicTable() {
       </div>
       <table className={styles.table}>
         <thead className={styles.tableHead}>
+
+        
           <tr>
             <th className={styles.tableCell}>Type</th>
             <th className={styles.tableCell}>Price</th>

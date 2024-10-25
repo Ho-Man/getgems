@@ -7,7 +7,7 @@ import MenuOpenIcon from '@mui/icons-material/MenuOpen';
 import CloseIcon from '@mui/icons-material/Close';
 import styles from '../styles/Navbar.module.css'; // Import CSS module
 import SearchIcon from '@mui/icons-material/Search'; // Thêm import SearchIcon
-import Image from 'next/image'; // Import Image từ Next.js
+import Image from 'next/image'; 
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
